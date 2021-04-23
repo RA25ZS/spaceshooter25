@@ -7,15 +7,12 @@ public class HealthDisplay : MonoBehaviour
 {
     Text healthText;
     PlayerMovement player;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         healthText = GetComponent<Text>();
         player = FindObjectOfType<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthText.text = player.GetHealth().ToString();

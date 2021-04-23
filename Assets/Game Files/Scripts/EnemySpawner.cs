@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] bool looping = false;
     int startingWave = 0;
     
-    // Start is called before the first frame update
     IEnumerator Start()
     {
         do
@@ -36,11 +35,5 @@ public class EnemySpawner : MonoBehaviour
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.GetTimwBetweenSpawns);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

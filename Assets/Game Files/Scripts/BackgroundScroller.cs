@@ -7,15 +7,16 @@ public class BackgroundScroller : MonoBehaviour
     [SerializeField] float backroundScrollSpeed = 0.5f;
     Material myMaterial;
     Vector2 offSet;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         myMaterial = GetComponent<Renderer>().material;
+    }
+    void Start()
+    {
         offSet = new Vector2(0f, backroundScrollSpeed);
     }
 
-    // Update is called once per frame
     void Update()
     {
         myMaterial.mainTextureOffset += offSet * Time.deltaTime;

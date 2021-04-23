@@ -9,13 +9,11 @@ public class Timer : MonoBehaviour
     [SerializeField] string levelToLoad;
     [SerializeField] float timer = 10f;
     private Text timerSeconds;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        timerSeconds = GetComponent<Text>(); 
+        timerSeconds = GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;

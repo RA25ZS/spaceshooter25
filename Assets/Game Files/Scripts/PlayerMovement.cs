@@ -14,22 +14,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.2f;
 
-
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float shootSpeed = 6f;
     [SerializeField] float firingPeriod = 0.1f;
 
-
     Coroutine firingCoroutine;
-
 
     float xMin;
     float xMax;
     float yMin;
     float yMax;
     
-    // Start is called before the first frame update
     void Start()
     {
         MoveBoundaries();
@@ -45,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -100,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-
     private void Move()
     {
         float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
