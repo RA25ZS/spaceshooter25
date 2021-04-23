@@ -28,23 +28,10 @@ public class WaveConfig : ScriptableObject
         return waveWaypoints;
     }
 
-    public float GetTimwBetweenSpawns()
-    {
-        return timeBetweenSpawns;
-    }
+    public float GetTimwBetweenSpawns { get => timeBetweenSpawns; }
+    public float GetSpawnRandom { get => spawnRandom; }
 
-    public float GetSpawnRandom()
-    {
-        return spawnRandom;
-    }
-
-    public int GetNumOfEnemies()
-    {
-        return numOfEnemies;
-    }
-
-    public float GetMoveSpeed()
-    {
-        return moveSpeed;
-    }
+    public int GetNumOfEnemies { get => numOfEnemies; }
+    public float GetMoveSpeed { get => moveSpeed; }
 }
+

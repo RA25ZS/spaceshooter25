@@ -29,12 +29,12 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnAllEnemies(WaveConfig waveConfig)
     {
-        for (int enemyCount = 0; enemyCount < waveConfig.GetNumOfEnemies(); enemyCount++)
+        for (int enemyCount = 0; enemyCount < waveConfig.GetNumOfEnemies; enemyCount++)
         {
             var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(), 
             waveConfig.GetWaypoints()[0].transform.position, Quaternion.identity);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
-            yield return new WaitForSeconds(waveConfig.GetTimwBetweenSpawns());
+            yield return new WaitForSeconds(waveConfig.GetTimwBetweenSpawns);
         }
     }
 

@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float shootSpeed = 6f;
     [SerializeField] float firingPeriod = 0.1f;
 
+
     Coroutine firingCoroutine;
+
 
     float xMin;
     float xMax;
@@ -74,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         return health;
     }
 
+    
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -96,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(firingPeriod);
         }
     }
+    
 
     private void Move()
     {
