@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7387006627871537359}
   - component: {fileID: 7387006627871537346}
   - component: {fileID: 7387006627871537357}
-  - component: {fileID: 7387006627871537356}
+  - component: {fileID: 6539761639995076662}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.83787394, a: 1}
+  m_Color: {r: 0, g: 0.9029491, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -79,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 000
---- !u!114 &7387006627871537356
+--- !u!114 &6539761639995076662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
