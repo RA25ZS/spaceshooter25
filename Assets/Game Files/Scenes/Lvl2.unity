@@ -1330,8 +1330,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 8d5f6886bcf353b4eb293cf9b451cb6e, type: 3}
 --- !u!4 &1972543249277905453 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5618203972537724900, guid: 8d5f6886bcf353b4eb293cf9b451cb6e,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1972543249277905452}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2845626494206450049
@@ -1641,6 +1640,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5444814967732526256, guid: 53304762f75a47f4bac9bdcae20bd7a4,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f6585ce6be5991438c900ae2018ac6c,
+        type: 2}
+    - target: {fileID: 5444814967732526256, guid: 53304762f75a47f4bac9bdcae20bd7a4,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a4b9f50c42bb0d4c9b7de3e21a9076a,
+        type: 2}
+    - target: {fileID: 5444814967732526256, guid: 53304762f75a47f4bac9bdcae20bd7a4,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d8b4c0296a91e94d8facb683c7faa15,
+        type: 2}
+    - target: {fileID: 5444814967732526256, guid: 53304762f75a47f4bac9bdcae20bd7a4,
+        type: 3}
+      propertyPath: waveConfigs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8da07e8e16b73f945a405d989d80488d,
+        type: 2}
     - target: {fileID: 5444814967732526257, guid: 53304762f75a47f4bac9bdcae20bd7a4,
         type: 3}
       propertyPath: m_Name
