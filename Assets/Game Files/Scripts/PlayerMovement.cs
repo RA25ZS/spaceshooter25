@@ -17,9 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float shootSpeed = 6f;
-    [SerializeField] float firingPeriod = 1f;
-    [SerializeField] int pooledAmount = 10;
-    [SerializeField] List<GameObject> bullets;
+    [SerializeField] float firingPeriod = 0.1f;
 
     Coroutine firingCoroutine;
 
@@ -31,30 +29,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         MoveBoundaries();
-
-        bullets = new List<GameObject>();
-        for (int i = 0; i < pooledAmount; i++)
-        {
-            GameObject obj = (GameObject)Instantiate(laserPrefab);
-            obj.SetActive(false);
-            bullets.Add(obj);
-        }
-
-        InvokeRepeating("FireBullets", firingPeriod, firingPeriod);
-    }
-
-    void FireBullets()
-    {
-        for (int i = 0; i < bullets.Count; i++)
-        {
-            if (!bullets[i].activeInHierarchy)
-            {
-                bullets[i].transform.position = transform.position;
-                bullets[i].transform.rotation = transform.rotation;
-                bullets[i].SetActive(true);
-                break;
-            }
-        }
     }
 
     private void MoveBoundaries()
@@ -70,13 +44,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        //Fire();
+        Fire();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
         health -= damageDealer.GetDamage();
+        damageDealer.Hit();
 
         if (health <= 0)
         {
@@ -96,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         return health;
     }
 
-    /*
+    
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -119,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(firingPeriod);
         }
     }
-    */
     
     private void Move()
     {

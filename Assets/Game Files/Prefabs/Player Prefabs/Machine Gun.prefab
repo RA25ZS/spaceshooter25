@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -800212129088074443}
   - component: {fileID: -2513189346128310765}
   - component: {fileID: 4997070704581599671}
-  - component: {fileID: 5602361563787714782}
   m_Layer: 10
   m_Name: Machine Gun
   m_TagString: Untagged
@@ -136,16 +135,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
---- !u!114 &5602361563787714782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6739973507276689587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebfc5184520d0b498af68883120af9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 5

@@ -6,22 +6,13 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
 
-    private void OnEnable()
-    {
-        Invoke("DisableBullet", 2f);
-    }
-
-    void DisableBullet()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void OnDisable()
-    {
-        CancelInvoke();
-    }
     public int GetDamage()
     {
         return damage;
+    }
+
+    public void Hit()
+    {
+        Destroy(gameObject);
     }
 }
