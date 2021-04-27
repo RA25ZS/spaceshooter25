@@ -105,8 +105,10 @@ MonoBehaviour:
   shootSoundVolume: 0.36
   laserPrefab: {fileID: 6739973507276689587, guid: d08bb0cf07dc9ce41bf5923ec6e866b7,
     type: 3}
-  shootSpeed: 16
-  firingPeriod: 0.1
+  shootSpeed: 15
+  firingPeriod: 0.3
+  pooledAmount: 10
+  bullets: []
 --- !u!60 &7765480170135411169
 PolygonCollider2D:
   m_ObjectHideFlags: 0

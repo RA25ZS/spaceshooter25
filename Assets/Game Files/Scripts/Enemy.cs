@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy Status")]
-    [SerializeField] float health = 100;
+    [SerializeField] float health = 10;
     [SerializeField] int scoreValue = 1;
 
     [Header("Shooting")]
@@ -58,7 +58,6 @@ public class Enemy : MonoBehaviour
             return;
         }
         health -= damageDealer.GetDamage();
-        damageDealer.Hit();
 
         if (health <= 0)
         {
