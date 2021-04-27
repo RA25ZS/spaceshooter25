@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        health -= damageDealer.GetDamage();
+        health -= damageDealer.GetDamage;
 
         if (health <= 0)
         {

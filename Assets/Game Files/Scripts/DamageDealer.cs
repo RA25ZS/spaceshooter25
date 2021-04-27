@@ -20,8 +20,6 @@ public class DamageDealer : MonoBehaviour
     {
         CancelInvoke();
     }
-    public int GetDamage()
-    {
-        return damage;
-    }
+    public int GetDamage { get => damage;}
+
 }

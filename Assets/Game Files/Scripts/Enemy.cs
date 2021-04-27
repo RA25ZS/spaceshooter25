@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        health -= damageDealer.GetDamage();
+        health -= damageDealer.GetDamage;
 
         if (health <= 0)
         {
