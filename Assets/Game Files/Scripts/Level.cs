@@ -27,7 +27,7 @@ public class Level : MonoBehaviour
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(delayInSeconds);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void Quit()
