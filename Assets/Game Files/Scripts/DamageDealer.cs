@@ -8,7 +8,7 @@ public class DamageDealer : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("DisableBullet", 2f);
+        Invoke("DisableBullet", 3f);
     }
 
     public void DisableBullet()
