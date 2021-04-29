@@ -11,7 +11,7 @@ public class DamageDealer : MonoBehaviour
         Invoke("DisableBullet", 2f);
     }
 
-    void DisableBullet()
+    public void DisableBullet()
     {
         gameObject.SetActive(false);
     }
