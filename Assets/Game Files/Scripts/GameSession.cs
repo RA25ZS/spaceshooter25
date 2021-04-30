@@ -36,10 +36,6 @@ public class GameSession : MonoBehaviour
 
     public void ResetGame()
     {
-        if (gameObject != null)
-        {
-            Destroy(gameObject);
-        }
-        
+        Destroy(gameObject);
     }
 }
