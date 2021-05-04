@@ -19,7 +19,10 @@ public class PlayerController : MonoBehaviour
     List<GameObject> bullets;
 
     Coroutine firingCoroutine;
-
+    [SerializeField] float xRangeLeft;
+    [SerializeField] float xRangeRight;
+    [SerializeField] float yRangeUp;
+    [SerializeField] float yRangeDown;
     Camera mainCamera;
     bool controlIsActive = true;
 
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
+        Boundaries();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -92,6 +96,29 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<Level>().LoadGameOver();
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+    }
+
+    void Boundaries()
+    {
+        if (transform.position.x < -xRangeLeft)
+        {
+            transform.position = new Vector3(-xRangeLeft, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > xRangeRight)
+        {
+            transform.position = new Vector3(xRangeRight, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.y < -yRangeDown)
+        {
+            transform.position = new Vector3(transform.position.x, -yRangeDown, transform.position.z);
+        }
+
+        if (transform.position.y > yRangeUp)
+        {
+            transform.position = new Vector3(transform.position.x, yRangeUp, transform.position.z);
+        }
     }
 
     public int GetHealth()
