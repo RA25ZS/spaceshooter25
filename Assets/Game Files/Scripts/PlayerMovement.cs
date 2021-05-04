@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!bullets[i].activeInHierarchy)
             {
+                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
                 bullets[i].transform.position = transform.position;
                 bullets[i].transform.rotation = transform.rotation;
                 bullets[i].SetActive(true);
