@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
-    [SerializeField] float shootSpeed = 6f;
     [SerializeField] float firingPeriod = 1f;
     [SerializeField] int pooledAmount = 10;
     List<GameObject> bullets;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9188152722776950239}
   - component: {fileID: -6232204286245171290}
   - component: {fileID: 1659529799660123184}
+  - component: {fileID: -6940971375504519782}
   m_Layer: 11
   m_Name: Enemy Shot
   m_TagString: Untagged
@@ -49,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -134,3 +136,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.45, y: 1.1}
   m_Direction: 0
+--- !u!114 &-6940971375504519782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964287721864896349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a02729775c747344809fd389937d318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 20

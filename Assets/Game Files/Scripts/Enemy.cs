@@ -13,7 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject projectile;
-    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] int pooledAmount = 10;
+    List<GameObject> bullets;
 
     [Header("Sound Effects")]
     [SerializeField] GameObject deathVFX;
@@ -24,6 +25,31 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+
+        bullets = new List<GameObject>();
+        for (int i = 0; i < pooledAmount; i++)
+        {
+            GameObject obj = (GameObject)Instantiate(projectile);
+            obj.SetActive(false);
+            bullets.Add(obj);
+        }
+
+        InvokeRepeating("FireBullets", minTimeBetweenShots, maxTimeBetweenShots);
+    }
+
+    void FireBullets()
+    {
+        for (int i = 0; i < bullets.Count; i++)
+        {
+            if (!bullets[i].activeInHierarchy)
+            {
+                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+                bullets[i].transform.position = transform.position;
+                bullets[i].transform.rotation = transform.rotation;
+                bullets[i].SetActive(true);
+                break;
+            }
+        }
     }
 
     void Update()
@@ -36,16 +62,8 @@ public class Enemy : MonoBehaviour
         shotCounter -= Time.deltaTime;
         if (shotCounter <= 0f)
         {
-            Fire();
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
-    }
-
-    private void Fire()
-    {
-        GameObject laser = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
