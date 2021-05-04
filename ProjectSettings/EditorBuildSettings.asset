@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game Files/Scenes/Start Menu.unity
+    path: Assets/SpaceShooter/Scenes/Start Menu.unity
     guid: bab0dc2b25ef5ce47b2041cf8878c499
   - enabled: 1
-    path: Assets/Game Files/Scenes/Level1.unity
+    path: Assets/SpaceShooter/Scenes/Level1.unity
     guid: d2b78b6020370f445b99b6658c0b40e0
   - enabled: 1
-    path: Assets/Game Files/Scenes/Level2.unity
+    path: Assets/SpaceShooter/Scenes/Level2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Game Files/Scenes/BossesLevel.unity
+    path: Assets/SpaceShooter/Scenes/BossesLevel.unity
     guid: 71de488ff98428c48ab77d33397b21d8
   - enabled: 1
-    path: Assets/Game Files/Scenes/Game Over.unity
+    path: Assets/SpaceShooter/Scenes/Game Over.unity
     guid: 3e4370ffd848d0048894d5fac139cd98
   - enabled: 1
-    path: Assets/Game Files/Scenes/WinScreen.unity
+    path: Assets/SpaceShooter/Scenes/WinScreen.unity
     guid: fd2f9772bcf279946afdfea9472d502b
   m_configObjects: {}
