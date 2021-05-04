@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     Coroutine firingCoroutine;
 
+    Camera mainCamera;
+    bool controlIsActive = true;
+
     float xMin;
     float xMax;
     float yMin;
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+
+        mainCamera = Camera.main;
         MoveBoundaries();
 
         bullets = new List<GameObject>();
@@ -57,17 +62,17 @@ public class PlayerController : MonoBehaviour
 
     private void MoveBoundaries()
     {
-        Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + playerPos;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - playerPos;
+        Camera mainCamera = Camera.main;
+        xMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + playerPos;
+        xMax = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - playerPos;
 
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + playerPos;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - playerPos;
+        yMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + playerPos;
+        yMax = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - playerPos;
     }
 
     void Update()
     {
-        Move();
+        Movement();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -93,13 +98,31 @@ public class PlayerController : MonoBehaviour
     {
         return health;
     }   
-    private void Move()
-    {
-        float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        float deltaY = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-        float newXpos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        float newYpos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
-        transform.position = new Vector2(newXpos, newYpos);
+    private void Movement()
+    {
+        if (controlIsActive)
+        {
+#if UNITY_STANDALONE || UNITY_EDITOR
+
+            if (Input.GetMouseButton(0))   
+            {
+                Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = transform.position.z;
+                transform.position = Vector3.MoveTowards(transform.position, mousePosition, 30 * Time.deltaTime);
+            }
+#endif
+
+#if UNITY_IOS || UNITY_ANDROID
+
+            if (Input.touchCount == 1)
+            {
+                Touch touch = Input.touches[0];
+                Vector3 touchPosition = mainCamera.ScreenToWorldPoint(touch.position);
+                touchPosition.z = transform.position.z;
+                transform.position = Vector3.MoveTowards(transform.position, touchPosition, 30 * Time.deltaTime);
+            }
+#endif
+        }
     }
 }
