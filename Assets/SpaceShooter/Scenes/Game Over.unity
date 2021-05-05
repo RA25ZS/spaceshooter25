@@ -346,12 +346,17 @@ PrefabInstance:
     - target: {fileID: 2139274246864216460, guid: bd34d13611816d444ba31cfedf217f5f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85
+      value: -64.4
       objectReference: {fileID: 0}
     - target: {fileID: 2139274246864216460, guid: bd34d13611816d444ba31cfedf217f5f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40
+      value: -61.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139274246864216462, guid: bd34d13611816d444ba31cfedf217f5f,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7505594574177940480, guid: bd34d13611816d444ba31cfedf217f5f,
         type: 3}
@@ -1424,8 +1429,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.14
-  m_fontSizeBase: 64.14
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

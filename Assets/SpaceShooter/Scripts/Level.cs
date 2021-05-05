@@ -7,7 +7,6 @@ public class Level : MonoBehaviour
 {
     [SerializeField] float delayInSeconds = 2.5f;
 
-
     public void StartGame()
     {
         SceneManager.LoadScene(0);

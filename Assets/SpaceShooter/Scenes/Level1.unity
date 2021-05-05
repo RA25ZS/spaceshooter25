@@ -762,6 +762,16 @@ PrefabInstance:
       propertyPath: levelToLoad
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 6235797910821938118, guid: bd34d13611816d444ba31cfedf217f5f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704370968365410144, guid: bd34d13611816d444ba31cfedf217f5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7505594574177940480, guid: bd34d13611816d444ba31cfedf217f5f,
         type: 3}
       propertyPath: m_Name
@@ -871,6 +881,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929274100857094259, guid: bd34d13611816d444ba31cfedf217f5f,
+        type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929274100857094259, guid: bd34d13611816d444ba31cfedf217f5f,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd34d13611816d444ba31cfedf217f5f, type: 3}
