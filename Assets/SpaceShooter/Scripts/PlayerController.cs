@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Camera mainCamera;
+
     [Header("Player Stats")]
-    [SerializeField] float speed = 7f;
-    [SerializeField] float playerPos = 1f;
-    [SerializeField] int health = 250;
-    [SerializeField] AudioClip deathSound;
     [SerializeField] AudioClip shootSound;
 
     [Header("Projectile Stats")]
@@ -18,24 +16,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int pooledAmount = 10;
     List<GameObject> bullets;
 
-    Coroutine firingCoroutine;
+    [Header("Boundaries")]
     [SerializeField] float xRangeLeft;
     [SerializeField] float xRangeRight;
     [SerializeField] float yRangeUp;
     [SerializeField] float yRangeDown;
-    Camera mainCamera;
+
     bool controlIsActive = true;
 
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
-    
     void Start()
     {
-
-        mainCamera = Camera.main;
-        MoveBoundaries();
 
         bullets = new List<GameObject>();
         for (int i = 0; i < pooledAmount; i++)
@@ -48,7 +38,7 @@ public class PlayerController : MonoBehaviour
         InvokeRepeating("FireBullets", firingPeriod, firingPeriod);
     }
 
-    void FireBullets()
+    public void FireBullets()
     {
         for (int i = 0; i < bullets.Count; i++)
         {
@@ -63,42 +53,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void MoveBoundaries()
-    {
-        Camera mainCamera = Camera.main;
-        xMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + playerPos;
-        xMax = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - playerPos;
-
-        yMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + playerPos;
-        yMax = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - playerPos;
-    }
-
-    void Update()
+    private void Update()
     {
         Movement();
         Boundaries();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        health -= damageDealer.GetDamage;
-        damageDealer.DisableBullet();
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        FindObjectOfType<Level>().LoadGameOver();
-        Destroy(gameObject);
-        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
-    }
-
-    void Boundaries()
+    private void Boundaries()
     {
         if (transform.position.x < -xRangeLeft)
         {
@@ -121,10 +82,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public int GetHealth()
-    {
-        return health;
-    }   
+     
 
     private void Movement()
     {

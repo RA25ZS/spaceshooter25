@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemies
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 946d4d40c352adf4c975354b50a43c83, type: 3}
+    - {fileID: 2800000, guid: 7d768e397ac325048973fd43c759bbcb, type: 3}
+    - {fileID: 2800000, guid: aa2324349d3091b4e87e461f1141a2ff, type: 3}
+    - {fileID: 2800000, guid: 2e95d97c903cfb64fa9fc83d20b72792, type: 3}
+    - {fileID: 2800000, guid: c5d684b040947204d827b7d548045c35, type: 3}
+    - {fileID: 2800000, guid: 46b88de19c2717649ac423ccc432f2e8, type: 3}
+    - {fileID: 2800000, guid: 9756aeb05185b314d8728d31f4005a6c, type: 3}
+    - {fileID: 2800000, guid: 29e5aa363502baa459d06255971a219a, type: 3}
+    - {fileID: 2800000, guid: 50d4659abf08f0b44a0fe254fc855c93, type: 3}
+    - {fileID: 2800000, guid: 49686a7513e1b8843bd41d6b3286b2a0, type: 3}
+    totalSpriteSurfaceArea: 110889
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 946d4d40c352adf4c975354b50a43c83, type: 3}
+  - {fileID: 21300000, guid: c5d684b040947204d827b7d548045c35, type: 3}
+  - {fileID: 21300000, guid: 9756aeb05185b314d8728d31f4005a6c, type: 3}
+  - {fileID: 21300000, guid: 46b88de19c2717649ac423ccc432f2e8, type: 3}
+  - {fileID: 21300000, guid: aa2324349d3091b4e87e461f1141a2ff, type: 3}
+  - {fileID: 21300000, guid: 49686a7513e1b8843bd41d6b3286b2a0, type: 3}
+  - {fileID: 21300000, guid: 29e5aa363502baa459d06255971a219a, type: 3}
+  - {fileID: 21300000, guid: 7d768e397ac325048973fd43c759bbcb, type: 3}
+  - {fileID: 21300000, guid: 50d4659abf08f0b44a0fe254fc855c93, type: 3}
+  - {fileID: 21300000, guid: 2e95d97c903cfb64fa9fc83d20b72792, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - enemyBlack1
+  - enemyRed3
+  - shipGreen_manned
+  - shipBlue_manned
+  - enemyBlue4
+  - ufoRed
+  - shipPink_manned
+  - enemyBlue2
+  - shipYellow_manned
+  - enemyBlue5
+  m_RenderDataMap: {}
+  m_Tag: Enemies
+  m_IsVariant: 0

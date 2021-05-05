@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class HealthDisplay : MonoBehaviour
 {
     Text healthText;
-    PlayerController player;
+    PlayerCollision player;
     private void Awake()
     {
         healthText = GetComponent<Text>();
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerCollision>();
     }
 
     void Update()
