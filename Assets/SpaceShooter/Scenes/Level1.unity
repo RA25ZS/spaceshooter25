@@ -467,7 +467,7 @@ PrefabInstance:
     - target: {fileID: 8244755664490677210, guid: df8d93c193da14e4fbba2afce1e5cf6c,
         type: 3}
       propertyPath: levelToLoad
-      value: Level2
+      value: Level1Complete
       objectReference: {fileID: 0}
     - target: {fileID: 8244755664490677212, guid: df8d93c193da14e4fbba2afce1e5cf6c,
         type: 3}

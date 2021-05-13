@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        timerSeconds.text = timer.ToString("f2");
+        timerSeconds.text = timer.ToString("f");
         if (timer <= 0)
         {
             SceneManager.LoadScene(levelToLoad);

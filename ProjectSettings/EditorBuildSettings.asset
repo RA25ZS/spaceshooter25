@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SpaceShooter/Scenes/Start Menu.unity
-    guid: bab0dc2b25ef5ce47b2041cf8878c499
+    path: Assets/SpaceShooter/Scenes/StartMenu.unity
+    guid: fa86bc7ac756d36469b595c4c64f0b7d
   - enabled: 1
     path: Assets/SpaceShooter/Scenes/Level1.unity
     guid: d2b78b6020370f445b99b6658c0b40e0
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SpaceShooter/Scenes/WinScreen.unity
     guid: fd2f9772bcf279946afdfea9472d502b
+  - enabled: 1
+    path: Assets/SpaceShooter/Scenes/Level1Complete.unity
+    guid: bab0dc2b25ef5ce47b2041cf8878c499
   m_configObjects: {}
