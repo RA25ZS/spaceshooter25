@@ -33,4 +33,9 @@ public class Level : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadSettingsScreen()
+    {
+        SceneManager.LoadScene("Settings");
+    }
 }

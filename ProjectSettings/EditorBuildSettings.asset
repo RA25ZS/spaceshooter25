@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SpaceShooter/Scenes/Level1Complete.unity
     guid: bab0dc2b25ef5ce47b2041cf8878c499
+  - enabled: 1
+    path: Assets/SpaceShooter/Scenes/Settings.unity
+    guid: 7806acf702a0a0a40aa0dbdaf877b764
   m_configObjects: {}
