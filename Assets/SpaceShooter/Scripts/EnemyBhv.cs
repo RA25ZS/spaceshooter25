@@ -19,8 +19,8 @@ public class EnemyBhv : MonoBehaviour
     [Header("Sound Effects")]
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfExplosion;
-    [SerializeField] AudioClip deathSound;
-    [SerializeField] AudioClip shootSound;
+    [SerializeField] AudioSource shootSoundSource;
+    [SerializeField] AudioSource deathSoundSource;
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class EnemyBhv : MonoBehaviour
         {
             if (!bullets[i].activeInHierarchy)
             {
-                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+                shootSoundSource.PlayOneShot(shootSoundSource.clip);
                 bullets[i].transform.position = transform.position;
                 bullets[i].transform.rotation = transform.rotation;
                 bullets[i].SetActive(true);
@@ -85,9 +85,9 @@ public class EnemyBhv : MonoBehaviour
     private void Die()
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
-        Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
         Destroy(explosion, durationOfExplosion);
-        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
+        deathSoundSource.PlayOneShot(deathSoundSource.clip);
+        Destroy(gameObject);
     }
 }

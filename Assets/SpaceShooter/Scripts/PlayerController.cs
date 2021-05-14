@@ -6,9 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-
-    [Header("Player Stats")]
-    [SerializeField] AudioClip shootSound;
+    [SerializeField] AudioSource shootSoundSource;
 
     [Header("Projectile Stats")]
     [SerializeField] GameObject laserPrefab;
@@ -44,7 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!bullets[i].activeInHierarchy)
             {
-                AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+                shootSoundSource.PlayOneShot(shootSoundSource.clip);
                 bullets[i].transform.position = transform.position;
                 bullets[i].transform.rotation = transform.rotation;
                 bullets[i].SetActive(true);
@@ -55,11 +53,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-        Boundaries();
+        PlayerMovement();
+        SetBoundaries();
     }
 
-    private void Boundaries()
+    private void SetBoundaries()
     {
         if (transform.position.x < -xRangeLeft)
         {
@@ -84,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
      
 
-    private void Movement()
+    private void PlayerMovement()
     {
         if (controlIsActive)
         {

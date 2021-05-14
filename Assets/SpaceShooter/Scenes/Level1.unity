@@ -312,6 +312,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8697b180a468024e80b9193d8c5e931, type: 3}
+--- !u!82 &320742516 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1659557826048635148, guid: 8e33fda0c220936498f5288af83d7450,
+    type: 3}
+  m_PrefabInstance: {fileID: 4636046282840342407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349551728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387,13 +393,25 @@ PrefabInstance:
     - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
       propertyPath: gameEffects.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
       propertyPath: gameEffects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 320742516}
+    - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: gameEffects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1409162702185918543, guid: 866cc6febcd9d3e4f8bbaa9320ebfdce,
+        type: 3}
+    - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: gameEffects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1518879944612743415, guid: 22868453f41937d488e2d79c2c98c1ce,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c7f156e9e78dc64ab2250a3e3ac4846, type: 3}
 --- !u!224 &368478863 stripped
