@@ -330,6 +330,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: eb07b1b3a9d0aa14696eedaf12210d33, type: 3}
+    - target: {fileID: 2254905204993575893, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2620814269633775396, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
       propertyPath: m_Name
@@ -392,26 +397,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
-      propertyPath: gameEffects.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
-        type: 3}
       propertyPath: gameEffects.Array.data[0]
       value: 
       objectReference: {fileID: 320742516}
-    - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+    - target: {fileID: 3582410655876039126, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
-      propertyPath: gameEffects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1409162702185918543, guid: 866cc6febcd9d3e4f8bbaa9320ebfdce,
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076150752061903952, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
-    - target: {fileID: 2620814269633775399, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
-        type: 3}
-      propertyPath: gameEffects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1518879944612743415, guid: 22868453f41937d488e2d79c2c98c1ce,
-        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c7f156e9e78dc64ab2250a3e3ac4846, type: 3}
 --- !u!224 &368478863 stripped
@@ -436,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 8244755664490677210, guid: df8d93c193da14e4fbba2afce1e5cf6c,
         type: 3}
       propertyPath: timer
-      value: 31
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8244755664490677210, guid: df8d93c193da14e4fbba2afce1e5cf6c,
         type: 3}
