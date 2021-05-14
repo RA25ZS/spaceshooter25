@@ -40,7 +40,7 @@ public class VolumeChanger : MonoBehaviour
         }
     }
 
-    public void SaveSound()
+    public void SaveSoundBetweenLevels()
     {
         PlayerPrefs.SetFloat(backgroundMusic, backgroundSlider.value);
         PlayerPrefs.SetFloat(soundEffects, soundeffectsSlider.value);
@@ -50,7 +50,7 @@ public class VolumeChanger : MonoBehaviour
     {
         if (!focus)
         {
-            SaveSound();
+            SaveSoundBetweenLevels();
         }
     }
 

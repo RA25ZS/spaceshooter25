@@ -12,10 +12,10 @@ public class AudioSettings : MonoBehaviour
 
     private void Awake()
     {
-        ContinueSettings();
+        SavedSettings();
     }
 
-    private void ContinueSettings()
+    private void SavedSettings()
     {
         backgroundSound = PlayerPrefs.GetFloat(backgroundMusic);
         soundEffectSounds = PlayerPrefs.GetFloat(soundEffects);
