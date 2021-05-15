@@ -20,7 +20,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void Die()
     {
-        FindObjectOfType<Level>().LoadGameOver();
+        FindObjectOfType<GameManager>().LoadGameOver();
         gameObject.SetActive(false);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position);
     }
