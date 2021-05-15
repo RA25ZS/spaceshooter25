@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] List<WaveConfig> waveConfigs;
+    [SerializeField] List<AssetReference> waveConfigs;
     [SerializeField] bool looping = false;
     int startingWave = 0;
+
+    AssetReference currentWaveRef;
     
     IEnumerator Start()
     {
@@ -26,8 +29,17 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnAllEnemies(WaveConfig waveConfig)
+    private IEnumerator SpawnAllEnemies(AssetReference waveAssetRef)
     {
+        if (currentWaveRef != null)
+        {
+            currentWaveRef.ReleaseAsset();
+        }
+
+        WaveConfig waveConfig = waveAssetRef.LoadAssetAsync<WaveConfig>().WaitForCompletion();
+
+        currentWaveRef = waveAssetRef;
+
         for (int enemyCount = 0; enemyCount < waveConfig.GetNumOfEnemies; enemyCount++)
         {
             var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(), 
