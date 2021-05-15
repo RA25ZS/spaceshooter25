@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     bool controlIsActive = true;
 
+    public static PlayerController instance;
+
     void Start()
     {
 

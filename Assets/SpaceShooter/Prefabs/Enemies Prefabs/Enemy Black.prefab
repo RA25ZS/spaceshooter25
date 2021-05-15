@@ -120,8 +120,9 @@ MonoBehaviour:
   maxTimeBetweenShots: 2.5
   projectile: {fileID: 7964287721864896349, guid: 091ec743420be7d4b8219cb9759b8bfc,
     type: 3}
+  hitEffect: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
   pooledAmount: 1
-  deathVFX: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+  deathVFX: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   durationOfExplosion: 1
   shootSoundSource: {fileID: 1985145066329566915}
   deathSoundSource: {fileID: 4601164021404108568}

@@ -103,7 +103,7 @@ MonoBehaviour:
   shootSoundSource: {fileID: 1659557826048635148}
   laserPrefab: {fileID: 6739973507276689587, guid: d08bb0cf07dc9ce41bf5923ec6e866b7,
     type: 3}
-  firingPeriod: 0.57
+  firingPeriod: 0.25
   pooledAmount: 10
   xRangeLeft: 4.78
   xRangeRight: 5.4

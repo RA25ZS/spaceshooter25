@@ -13,6 +13,7 @@ public class EnemyBhv : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject projectile;
+    [SerializeField] GameObject hitEffect;
     [SerializeField] int pooledAmount = 10;
     List<GameObject> bullets;
 
@@ -75,11 +76,15 @@ public class EnemyBhv : MonoBehaviour
         }
         health -= damageDealer.GetDamage;
         damageDealer.DisableBullet();
-
         if (health <= 0)
         {
             Die();
         }
+        else
+        {
+            Instantiate(hitEffect, transform.position, Quaternion.identity, transform);
+        }
+            
     }
 
     private void Die()
