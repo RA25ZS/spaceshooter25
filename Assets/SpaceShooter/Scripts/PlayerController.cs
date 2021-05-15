@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projectile Stats")]
     [SerializeField] GameObject laserPrefab;
-    [SerializeField] float firingPeriod = 1f;
+    [SerializeField] float firingPeriod = 0.7f;
     [SerializeField] int pooledAmount = 10;
     List<GameObject> bullets;
 
