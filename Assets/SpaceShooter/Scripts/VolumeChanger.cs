@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class VolumeChanger : MonoBehaviour
@@ -12,8 +13,7 @@ public class VolumeChanger : MonoBehaviour
     private int firstPlaySave;
     private float backgroundSound, soundEffectSounds;
     [SerializeField] Slider backgroundSlider, soundeffectsSlider;
-    [SerializeField] AudioSource backgroundSoundMusic;
-    [SerializeField] AudioSource[] gameEffects;
+    [SerializeField] AudioMixer audioMixer;
 
     private void Start()
     {
@@ -38,6 +38,9 @@ public class VolumeChanger : MonoBehaviour
             soundEffectSounds = PlayerPrefs.GetFloat(soundEffects);
             soundeffectsSlider.value = soundEffectSounds;
         }
+
+        audioMixer.SetFloat("MusicVolume", backgroundSound);
+        audioMixer.SetFloat("SoundsVolume", soundEffectSounds);
     }
 
     public void SaveSoundBetweenLevels()
@@ -56,11 +59,12 @@ public class VolumeChanger : MonoBehaviour
 
     public void UpdateSound()
     {
-        backgroundSoundMusic.volume = backgroundSlider.value;
+        SetVolumes(Mathf.Lerp(-80, 0, backgroundSlider.value), Mathf.Lerp(-80, 0, soundeffectsSlider.value));
+    }
 
-        for (int i = 0; i < gameEffects.Length; i++)
-        {
-            gameEffects[i].volume = soundeffectsSlider.value;
-        }
+    void SetVolumes(float _musicVol, float _soundsVol)
+    {
+        audioMixer.SetFloat("MusicVolume", _musicVol);
+        audioMixer.SetFloat("SoundsVolume", _soundsVol);
     }
 }

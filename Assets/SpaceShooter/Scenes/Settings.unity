@@ -973,12 +973,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &1123661986 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2699082625240656065, guid: 34d29fefa9f5ac14a9405fb64d358f01,
-    type: 3}
-  m_PrefabInstance: {fileID: 2699082625593227922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1123661987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2699082625240656070, guid: 34d29fefa9f5ac14a9405fb64d358f01,
@@ -1327,8 +1321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 1595002589}
   soundeffectsSlider: {fileID: 707318727}
-  backgroundSoundMusic: {fileID: 1123661986}
-  gameEffects: []
+  audioMixer: {fileID: 24100000, guid: 903f57666d760f94594c285d2f3f76a0, type: 2}
 --- !u!4 &1392001899
 Transform:
   m_ObjectHideFlags: 0
