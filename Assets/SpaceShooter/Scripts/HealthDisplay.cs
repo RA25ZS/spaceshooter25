@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthDisplay : MonoBehaviour
+namespace SpaceShooter
 {
-    Text healthText;
-    PlayerCollision player;
-    private void Awake()
+    public class HealthDisplay : MonoBehaviour
     {
-        healthText = GetComponent<Text>();
-        player = FindObjectOfType<PlayerCollision>();
-    }
+        Text healthText;
+        PlayerCollision player;
+        private void Awake()
+        {
+            healthText = GetComponent<Text>();
+            player = FindObjectOfType<PlayerCollision>();
+        }
 
-    void Update()
-    {
-        healthText.text = player.GetHealth().ToString();
+        void Update()
+        {
+            healthText.text = player.GetHealth().ToString();
+        }
     }
 }

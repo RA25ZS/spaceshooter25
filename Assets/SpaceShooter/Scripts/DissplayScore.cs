@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DissplayScore : MonoBehaviour
+namespace SpaceShooter
 {
-    Text scoreText;
-    GameSession gameSession;
-
-    private void Awake()
+    public class DissplayScore : MonoBehaviour
     {
-        scoreText = GetComponent<Text>();
-        gameSession = FindObjectOfType<GameSession>();
-    }
+        Text scoreText;
+        GameSession gameSession;
 
-    void Update()
-    {
-        scoreText.text = gameSession.GetScore().ToString();
+        private void Awake()
+        {
+            scoreText = GetComponent<Text>();
+            gameSession = FindObjectOfType<GameSession>();
+        }
+
+        void Update()
+        {
+            scoreText.text = gameSession.GetScore().ToString();
+        }
     }
 }

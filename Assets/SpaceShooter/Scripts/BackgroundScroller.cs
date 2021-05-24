@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundScroller : MonoBehaviour
+namespace SpaceShooter
 {
-    [SerializeField] float backroundScrollSpeed = 0.5f;
-    Material myMaterial;
-    Vector2 offSet;
+    public class BackgroundScroller : MonoBehaviour
+    {
+        [SerializeField] float backroundScrollSpeed = 0.5f;
+        Material myMaterial;
+        Vector2 offSet;
 
-    private void Awake()
-    {
-        myMaterial = GetComponent<Renderer>().material;
-    }
-    void Start()
-    {
-        offSet = new Vector2(0f, backroundScrollSpeed);
-    }
+        private void Awake()
+        {
+            myMaterial = GetComponent<Renderer>().material;
+        }
+        void Start()
+        {
+            offSet = new Vector2(0f, backroundScrollSpeed);
+        }
 
-    void Update()
-    {
-        myMaterial.mainTextureOffset += offSet * Time.deltaTime;
+        void Update()
+        {
+            myMaterial.mainTextureOffset += offSet * Time.deltaTime;
+        }
     }
 }

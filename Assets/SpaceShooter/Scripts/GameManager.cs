@@ -3,39 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+namespace SpaceShooter
 {
-    [SerializeField] float delayInSeconds = 2.5f;
-
-    public void StartGame()
+    public class GameManager : MonoBehaviour
     {
-        SceneManager.LoadScene(0);
-    }
+        [SerializeField] float delayInSeconds = 2.5f;
 
-    public void LoadGame()
-    {
-        SceneManager.LoadScene(1);
-        FindObjectOfType<GameSession>().ResetGame(); 
-    }
+        public void StartGame()
+        {
+            SceneManager.LoadScene(0);
+        }
 
-    public void LoadGameOver()
-    {
-        StartCoroutine(WaitAndLoad());
-    }
+        public void LoadGame()
+        {
+            SceneManager.LoadScene(1);
+            FindObjectOfType<GameSession>().ResetGame();
+        }
 
-    IEnumerator WaitAndLoad()
-    {
-        yield return new WaitForSeconds(delayInSeconds);
-        SceneManager.LoadScene(4);
-    }
+        public void LoadGameOver()
+        {
+            StartCoroutine(WaitAndLoad());
+        }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
+        IEnumerator WaitAndLoad()
+        {
+            yield return new WaitForSeconds(delayInSeconds);
+            SceneManager.LoadScene(4);
+        }
 
-    public void LoadSettingsScreen()
-    {
-        SceneManager.LoadScene("Settings");
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
+        public void LoadSettingsScreen()
+        {
+            SceneManager.LoadScene("Settings");
+        }
     }
 }

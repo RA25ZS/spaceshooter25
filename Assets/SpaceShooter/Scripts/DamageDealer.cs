@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageDealer : MonoBehaviour
+namespace SpaceShooter
 {
-    [SerializeField] int damage = 10;
-
-    private void OnEnable()
+    public class DamageDealer : MonoBehaviour
     {
-        Invoke("DisableBullet", 3f);
-    }
+        [SerializeField] int damage = 10;
 
-    public void DisableBullet()
-    {
-        gameObject.SetActive(false);
-    }
+        private void OnEnable()
+        {
+            Invoke("DisableBullet", 3f);
+        }
 
-    private void OnDisable()
-    {
-        CancelInvoke();
-    }
-    public int GetDamage { get => damage;}
+        public void DisableBullet()
+        {
+            gameObject.SetActive(false);
+        }
 
+        private void OnDisable()
+        {
+            CancelInvoke();
+        }
+        public int GetDamage { get => damage; }
+
+    }
 }

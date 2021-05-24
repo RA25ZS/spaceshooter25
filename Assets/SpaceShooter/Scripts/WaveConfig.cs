@@ -3,35 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Enemy Wave Config")]
-public class WaveConfig : ScriptableObject
+
+
+namespace SpaceShooter
 {
-    [SerializeField] GameObject enemyPrefab;
-    [SerializeField] GameObject pathPrefab;
-    [SerializeField] float timeBetweenSpawns;
-    [SerializeField] float spawnRandom;
-    [SerializeField] int numOfEnemies;
-    [SerializeField] float moveSpeed;
-
-    public GameObject GetEnemyPrefab()
+    [CreateAssetMenu(menuName = "Enemy Wave Config")]
+    public class WaveConfig : ScriptableObject
     {
-        return enemyPrefab;
-    }
+        [SerializeField] GameObject enemyPrefab;
+        [SerializeField] GameObject pathPrefab;
+        [SerializeField] float timeBetweenSpawns;
+        [SerializeField] float spawnRandom;
+        [SerializeField] int numOfEnemies;
+        [SerializeField] float moveSpeed;
 
-    public List<Transform> GetWaypoints()
-    {
-        var waveWaypoints = new List<Transform>();
-        foreach (Transform child in pathPrefab.transform)
+        public GameObject GetEnemyPrefab()
         {
-            waveWaypoints.Add(child);
+            return enemyPrefab;
         }
-        return waveWaypoints;
+
+        public List<Transform> GetWaypoints()
+        {
+            var waveWaypoints = new List<Transform>();
+            foreach (Transform child in pathPrefab.transform)
+            {
+                waveWaypoints.Add(child);
+            }
+            return waveWaypoints;
+        }
+
+        public float GetTimwBetweenSpawns { get => timeBetweenSpawns; }
+        public float GetSpawnRandom { get => spawnRandom; }
+
+        public int GetNumOfEnemies { get => numOfEnemies; }
+        public float GetMoveSpeed { get => moveSpeed; }
     }
-
-    public float GetTimwBetweenSpawns { get => timeBetweenSpawns; }
-    public float GetSpawnRandom { get => spawnRandom; }
-
-    public int GetNumOfEnemies { get => numOfEnemies; }
-    public float GetMoveSpeed { get => moveSpeed; }
 }
 
