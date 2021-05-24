@@ -7,7 +7,8 @@ namespace SpaceShooter
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] float delayInSeconds = 2.5f;
+        [SerializeField] GameObject pausePanel;
+        [SerializeField] float delayInSeconds = 2.5f;   
 
         public void StartGame()
         {
@@ -39,6 +40,19 @@ namespace SpaceShooter
         public void LoadSettingsScreen()
         {
             SceneManager.LoadScene("Settings");
+        }
+
+        public void OnPauseActive()
+        {
+            
+            Time.timeScale = 0;
+            pausePanel.SetActive(true);
+        }
+
+        public void OnPauseInactive()
+        {
+            Time.timeScale = 1;
+            pausePanel.SetActive(false);
         }
     }
 }
