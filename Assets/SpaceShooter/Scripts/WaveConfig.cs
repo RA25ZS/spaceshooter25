@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 namespace SpaceShooter
 {
     [CreateAssetMenu(menuName = "Enemy Wave Config")]

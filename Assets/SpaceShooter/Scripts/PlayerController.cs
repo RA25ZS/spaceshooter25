@@ -24,8 +24,6 @@ namespace SpaceShooter
 
         bool controlIsActive = true;
 
-        public static PlayerController instance;
-
         void Start()
         {
 
