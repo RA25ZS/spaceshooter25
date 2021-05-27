@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a7473f942336645b1e4e634631cd5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausePanel: {fileID: 2209962672218711132, guid: c1300e8bd0d156c469714d47313d6414,
+    type: 3}
   delayInSeconds: 0.5
