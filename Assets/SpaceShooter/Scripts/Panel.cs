@@ -2,39 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
-{
-    [SerializeField] GameObject pauseMenu;
-    bool isPaused;
-    // Start is called before the first frame update
-    void Start()
+namespace SpaceShooter
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public class Panel : MonoBehaviour
     {
-        if (isPaused)
+        [SerializeField] GameObject pauseMenu;
+        bool isPaused;
+        // Start is called before the first frame update
+        void Start()
         {
-            OnPauseEnbaled();
+
         }
 
-        else
+        // Update is called once per frame
+        void Update()
         {
-            OnPauseDisabled();
+            if (isPaused)
+            {
+                OnPauseEnbaled();
+            }
+
+            else
+            {
+                OnPauseDisabled();
+            }
         }
-    }
 
-    void OnPauseEnbaled()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
-    }
+        void OnPauseEnbaled()
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
 
-    void OnPauseDisabled()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        void OnPauseDisabled()
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

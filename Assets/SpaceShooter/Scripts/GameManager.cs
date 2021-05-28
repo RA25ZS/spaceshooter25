@@ -13,6 +13,7 @@ namespace SpaceShooter
         public void StartGame()
         {
             SceneManager.LoadScene(0);
+            Time.timeScale = 1;
         }
 
         public void LoadGame()
@@ -40,6 +41,7 @@ namespace SpaceShooter
         public void LoadSettingsScreen()
         {
             SceneManager.LoadScene("Settings");
+            Time.timeScale = 1;
         }
 
         public void OnPauseActive()
