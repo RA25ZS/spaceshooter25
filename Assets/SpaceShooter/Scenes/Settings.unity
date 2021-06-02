@@ -205,6 +205,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bbcd68baacb97439ede115f6ff104e, type: 3}
+--- !u!1001 &947680005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 83899239435072619, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e10e0104b7460e48a8de6076e035e44, type: 3}
+    - target: {fileID: 2620814269633775396, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManagerSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775396, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 575.1383
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1268.5083
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1150.8381
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c7f156e9e78dc64ab2250a3e3ac4846, type: 3}
 --- !u!1001 &1217592243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,6 +506,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7594493944263658787, guid: 59442b78ebb875840812645b91797f3d,
+        type: 3}
+      propertyPath: volumeSliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594493944263658787, guid: 59442b78ebb875840812645b91797f3d,
+        type: 3}
+      propertyPath: volumeSliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1595002589}
+    - target: {fileID: 7594493944263658787, guid: 59442b78ebb875840812645b91797f3d,
+        type: 3}
+      propertyPath: volumeSliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 707318727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59442b78ebb875840812645b91797f3d, type: 3}
 --- !u!114 &1367727494 stripped
@@ -558,9 +652,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 712276868351682220, guid: 9c2f721e49434ad4599132387786584e,
         type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 712276868351682220, guid: 9c2f721e49434ad4599132387786584e,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1392001898}
+    - target: {fileID: 712276868351682220, guid: 9c2f721e49434ad4599132387786584e,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 712276868351682220, guid: 9c2f721e49434ad4599132387786584e,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceShooter.VolumeChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 712276868351682221, guid: 9c2f721e49434ad4599132387786584e,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1139,9 +1248,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6561296922950461185, guid: 9695f4f5403c8ab42a24a6c4bc7c8e6c,
         type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561296922950461185, guid: 9695f4f5403c8ab42a24a6c4bc7c8e6c,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1392001898}
+    - target: {fileID: 6561296922950461185, guid: 9695f4f5403c8ab42a24a6c4bc7c8e6c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561296922950461185, guid: 9695f4f5403c8ab42a24a6c4bc7c8e6c,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceShooter.VolumeChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6561296922950461191, guid: 9695f4f5403c8ab42a24a6c4bc7c8e6c,
         type: 3}
       propertyPath: m_Name
@@ -1497,7 +1621,7 @@ PrefabInstance:
     - target: {fileID: 758262735123039631, guid: 51f93bf5cd7c18541bebd5c0761631cf,
         type: 3}
       propertyPath: m_Name
-      value: Start Menu Canvas
+      value: Settings Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 758262735123039634, guid: 51f93bf5cd7c18541bebd5c0761631cf,
         type: 3}

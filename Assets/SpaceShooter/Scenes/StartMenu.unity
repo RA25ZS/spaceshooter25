@@ -767,7 +767,7 @@ Transform:
   m_Children:
   - {fileID: 1217592244}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1367727493
 PrefabInstance:
@@ -1273,10 +1273,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManagerSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 2620814269633775396, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2620814269633775398, guid: 9c7f156e9e78dc64ab2250a3e3ac4846,
         type: 3}
@@ -1504,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 7062218478998786277, guid: 49debe5d64ef069438594194be8d7b83,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7062218478998786277, guid: 49debe5d64ef069438594194be8d7b83,
         type: 3}

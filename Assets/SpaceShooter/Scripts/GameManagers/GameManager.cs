@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace SpaceShooter
 {
     public class GameManager : MonoBehaviour
     {
         [SerializeField] GameObject pausePanel;
-        [SerializeField] float delayInSeconds = 2.5f;   
+        [SerializeField] float delayInSeconds = 2.5f;
+        [SerializeField] Slider[] volumeSliders;
 
         public void StartGame()
         {
@@ -55,6 +57,16 @@ namespace SpaceShooter
         {
             Time.timeScale = 1;
             pausePanel.SetActive(false);
+        }
+
+        public void SetMusicVolume(float value)
+        {
+            
+        }
+
+        public void SetEffectsVolume(float value)
+        {
+
         }
     }
 }
