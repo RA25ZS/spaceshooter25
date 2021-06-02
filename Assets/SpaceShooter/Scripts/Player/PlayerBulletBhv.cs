@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SpaceShooter
 {
-    public class BulletBhv : DamageDealer
+    public class PlayerBulletBhv : DamageDealer
     {
         [SerializeField] float bulletSpeed = 5f;
         void Update()
