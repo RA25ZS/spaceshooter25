@@ -9,7 +9,7 @@ namespace SpaceShooter
     public class EnemySpawner : MonoBehaviour
     {
         [SerializeField] List<AssetReference> waveConfigs;
-        bool looping = false;
+        [SerializeField] bool looping = false;
         int startingWave = 0;
 
         AssetReference currentWaveRef;
